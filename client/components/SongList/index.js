@@ -19,7 +19,12 @@ class SongList extends Component {
   }
 
   render() {
-    return <div>Lyrical</div>;
+    if (this.props.data.loading) {
+      return <div>Loading...</div>;
+    }
+    return (
+      <div>{!this.props.data.loading && <div>{this.renderSongs()}</div>}</div>
+    );
   }
 }
 
