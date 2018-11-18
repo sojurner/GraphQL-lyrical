@@ -28,12 +28,18 @@ class SongList extends Component {
   }
 }
 
+// 1. identify data required
+// 2. write query in Graphiql and in component file
+// 3. Bond query + component
+// 4. Access data
+
 const query = gql`
   {
     songs {
       title
+      id
     }
   }
 `;
 
-export default SongList;
+export default graphql(query)(SongList);
