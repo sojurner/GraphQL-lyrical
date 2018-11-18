@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 
-const Root = () => {
-  return <div>Lyrical</div>
-};
+import SongList from './components/SongList';
+
+const client = new ApolloClient({});
 
 ReactDOM.render(
   <Root />,
