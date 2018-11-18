@@ -8,6 +8,9 @@ import SongList from './components/SongList';
 const client = new ApolloClient({});
 
 ReactDOM.render(
-  <Root />,
+  <ApolloProvider client={client}>
+    <SongList />
+  </ApolloProvider>,
+
   document.querySelector('#root')
 );
